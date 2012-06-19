@@ -48,6 +48,7 @@ argument is a function (which ido can't handle)."
 		       (car collection)))
 	   (symbolp collection)
 	   inherit-input-method
+       (not (symbolp this-command))
 	   (eq (get this-command 'ido) 'ignore))
       
       ad-do-it
